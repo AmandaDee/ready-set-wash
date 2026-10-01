@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="Find a cheaper time to run your washing machine." name="description">
+  <title>Ready, Set, Wash · The right time for a lighter load.</title>
+  <link href="/mascot.svg" rel="icon" type="image/svg+xml">
+  <link href="/styles.css" rel="stylesheet">
+  <script src="/app.js" type="module"></script>
+</head>
+<body>
+<header class="topbar"><a aria-label="Ready, Set, Wash home" class="brand" href="/"><img alt="" height="62"
+                                                                                         src="/mascot.svg" width="54">Ready,
+  Set, Wash</a>
+  <nav aria-label="Main navigation">
+    <button aria-selected="true" class="tab active" id="plan-tab">Plan a wash</button>
+    <button aria-selected="false" class="tab" id="history-tab">History</button>
+  </nav>
+  <span class="badge" id="mode">● Demo data</span></header>
+<main>
+  <section id="planner">
+    <div class="hero">
+      <div><p class="eyebrow">READY, SET, WASH</p>
+        <h1>The right time<br> for a lighter load.</h1>
+        <p class="subtitle">Find the cheapest window for your next wash.</p></div>
+    </div>
+    <div class="workspace">
+      <section class="card settings"><h2>Your next load</h2>
+        <p class="muted">Tell us a bit about your wash.</p>
+        <form id="wash-form"><label><span>◷ &nbsp; Cycle duration</span><select id="duration" name="duration">
+          <option value="30">30 minutes</option>
+          <option value="60">60 minutes</option>
+          <option selected value="90">90 minutes</option>
+          <option value="120">120 minutes</option>
+          <option value="180">180 minutes</option>
+          <option value="240">240 minutes</option>
+        </select></label><label><span>▦ &nbsp; Finish by</span><input id="deadline" name="deadline"
+                                                                      required type="datetime-local"></label>
+          <button class="primary" id="calculate" type="submit">↗ &nbsp; Find my wash window</button>
+        </form>
+      </section>
+      <section aria-busy="false" aria-live="polite" class="card recommendation" id="result"><span class="badge">✦ BEST START TIME</span>
+        <div class="recommendation-main">
+          <div><p class="start-time" id="start-time">—</p>
+            <h2 class="finish" id="finish">Ready when you are</h2>
+            <p class="muted" id="explanation">Choose your settings and let’s find a clever time to wash.</p></div>
+          <img alt="" class="result-mascot" src="/mascot.svg"></div>
+        <div class="comparison">
+          <div><span>Start now</span><strong id="now-cost">—</strong><small>estimated cost</small></div>
+          <div class="selected"><span>Recommended</span><strong id="best-cost">—</strong><small>estimated cost</small>
+          </div>
+          <div><span>Save</span><strong id="savings">—</strong><small>compared to now</small></div>
+          <button class="primary reminder" disabled id="reminder">↓ Calendar reminder</button>
+        </div>
+      </section>
+    </div>
+    <p class="error" hidden id="error" role="alert"></p>
+    <section class="card chart-card">
+      <div class="chart-heading"><h2>Electricity prices</h2><span class="muted" id="chart-label">Illustrative prices · p/kWh</span>
+      </div>
+      <div aria-label="Electricity price chart" class="chart" id="chart" role="img"></div>
+      <p class="help">Green marks your recommended wash. Hover or focus a bar for its price.</p></section>
+    <p class="footnote">ⓘ Cost estimates assume a 0.8 kWh wash with even energy use and exclude standing charges. You
+      start the machine yourself. Times shown in Europe/London.</p>
+  </section>
+  <section hidden id="history"><p class="eyebrow">YOUR CLEVER TIMING</p>
+    <h1>Wash history</h1>
+    <p class="subtitle">Your last 20 plans, saved only in this browser.</p>
+    <div class="card" id="history-list"></div>
+    <button class="secondary" id="clear-history">Clear history</button>
+  </section>
+</main>
+<footer>Made for everyday energy decisions. An independent personal project.</footer>
+</body>
+</html>

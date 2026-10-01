@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 240" fill="none">
+    <title>Ready, Set, Wash mascot</title>
+    <desc>A smiling washing machine crouched at a race starting line.</desc>
+    <ellipse cx="143" cy="220" rx="126" ry="10" fill="#eee6fb"/>
+    <path d="M180 227L263 218" stroke="#d9c9f3" stroke-width="5" stroke-linecap="round"/>
+    <g stroke="#43216a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M110 164Q97 181 67 181L45 199M145 174L151 195L169 206" stroke-width="13"/>
+        <path d="M51 177Q34 173 32 190L30 208Q43 214 63 208L64 193Z" fill="#b99be9"/>
+        <path d="M43 183L41 201L61 200" stroke="#fff" stroke-width="4"/>
+        <path d="M148 193Q139 207 143 214Q161 219 183 212L178 201Z" fill="#b99be9"/>
+        <path d="M154 201L165 203M151 207L162 209" stroke="#fff" stroke-width="3"/>
+        <path d="M86 29Q90 17 105 20L220 33Q236 35 232 52L211 159Q208 177 192 178L74 163Q58 162 63 144Z"
+              fill="#fdfbff"/>
+        <path d="M86 29L63 144Q59 158 74 163L95 170L119 52Q121 33 105 25Z" fill="#e4d6f8" stroke="#ad91df"
+              stroke-width="4"/>
+        <path d="M119 52L229 63" stroke="#e1d4f8" stroke-width="4"/>
+        <path d="M199 46L217 48" stroke="#8052b5" stroke-width="7"/>
+        <g fill="#8052b5" stroke="none">
+            <circle cx="197" cy="64" r="2.5"/>
+            <circle cx="207" cy="65" r="2.5"/>
+            <circle cx="217" cy="66" r="2.5"/>
+        </g>
+        <ellipse cx="147" cy="80" rx="5" ry="7" fill="#43216a" stroke="none"/>
+        <ellipse cx="188" cy="85" rx="5" ry="7" fill="#43216a" stroke="none"/>
+        <path d="M162 84Q167 91 174 86" stroke-width="3.5"/>
+        <circle cx="159" cy="130" r="36" fill="#c6a5ee" stroke-width="4"/>
+        <circle cx="159" cy="130" r="27" fill="#8c5ab9" stroke="none"/>
+        <path d="M145 120Q148 111 158 112" stroke="#d8baf5" stroke-width="6"/>
+        <path d="M160 139Q165 124 179 134" stroke="#74469e" stroke-width="11"/>
+        <path d="M102 130L113 193L100 213M207 143L228 196L241 214" stroke-width="13"/>
+        <path d="M102 204L119 216M102 204L99 219M102 204L88 216M238 207L254 215M238 207L233 218M238 207L224 214"
+              stroke-width="8"/>
+    </g>
+</svg>
