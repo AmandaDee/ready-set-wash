@@ -17,19 +17,18 @@ async function settled() {
 test('planner works across demo, live, history, reminders and errors', async () => {
   const dom = new JSDOM(readFileSync(new URL('../src/ready_set_wash/static/index.html', import.meta.url), 'utf8'), {url: 'http://localhost:8000'});
   Object.assign(globalThis, {
-    document: dom.window.document,
-    window: dom.window,
-    localStorage: dom.window.localStorage,
-    innerWidth: 1440
+    document: dom.window.document, window: dom.window, localStorage: dom.window.localStorage, innerWidth: 1440
   });
   let state = 'demo';
   const start = new Date(Date.now() + 3600000).toISOString();
   const end = new Date(Date.now() + 9000000).toISOString();
   const data = {
-    mode: 'demo', plan: {start, end, costPence: 10, nowCostPence: 24, savingsPence: 14},
+    mode: 'demo',
+    plan: {start, end, costPence: 10, nowCostPence: 24, savingsPence: 14},
     prices: Array.from({length: 24}, (_, i) => ({
       start: new Date(Date.now() + i * 1800000).toISOString(),
-      end: new Date(Date.now() + (i + 1) * 1800000).toISOString(), pencePerKwh: 10 + i
+      end: new Date(Date.now() + (i + 1) * 1800000).toISOString(),
+      pencePerKwh: 10 + i
     })),
   };
   globalThis.fetch = async (_url, options) => {
@@ -51,7 +50,7 @@ test('planner works across demo, live, history, reminders and errors', async () 
   assert.equal($('energy'), null);
   assert.equal(document.querySelectorAll('img[src="/mascot.svg"]').length, 2);
   assert.match(document.querySelector('h1').textContent, /The right time.*for a lighter load/);
-  assert.match(document.querySelector('.brand').textContent, /Ready, Set, Wash/);
+  assert.equal(document.querySelector('.brand').textContent.replace(/\s+/g, ' ').trim(), 'Ready, Set, Wash');
   assert.equal($('best-cost').textContent, '10p');
   assert.equal($('mode').textContent, '● Demo data');
   assert.ok(document.querySelectorAll('.bar.chosen').length);
