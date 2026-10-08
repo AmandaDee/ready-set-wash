@@ -443,9 +443,9 @@ starlette==1.7.0 \
     --hash=sha256:67f8e99895493dd2911a03f11314af6ceebeae4e704bb9f43dfc6a9db151c93e \
     --hash=sha256:c79f74ea63cff761804fbbfb182f1e0b440c2d07b164d24700c5a1bab5d6ff5d
     # via fastapi
-strawberry-graphql==0.328.0 \
-    --hash=sha256:d99e5160c2a86c5d38a7a996a6a3fa23ab050f9c4aaf4969bcc15f17d5b194a5 \
-    --hash=sha256:ec9f7cf9f9987f092e3e4a86ac2f8dc6ff7aacbc8f8dd7bb8ccbe8ba7d977899
+strawberry-graphql==0.331.1 \
+    --hash=sha256:30b8e5c3422abf4191dc1d0e780e4c9be61e1c01ffc6e6a5e26ff737dad0ff41 \
+    --hash=sha256:67394b874f1f5dd589322a346869cc8a60926c8aa106c192fbed65907eca1b32
     # via ready-set-wash
 typing-extensions==4.16.0 \
     --hash=sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8 \
